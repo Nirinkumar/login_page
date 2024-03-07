@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    background-color: #000;
+}
+
+.login{
+    background-color: #0b0725;
+    width: 400px;
+    height: 470px;
+    max-width: 400px;
+    max-height: 470px;
+    border-radius: 50px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.login::before{
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #ee00ff);
+    animation: rotate_border 6s linear infinite;
+}
+
+.login::after{
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #5ceef1);
+    animation: rotate_border 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes rotate_border{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.container{
+    position: absolute;
+    content: '';
+    border-radius: 50px 5px;
+    background-color: #000;
+    inset: 5px;
+    z-index: 1;
+    padding: 50px 40px;
+    color: #00ccff;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.input_text{
+    width: 95%;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #00ccff;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #00ccff;
+}
+
+::placeholder{
+    font-size: 15px;
+    color: #00ccff52;
+    letter-spacing: 1px;
+}
+
+.fa{
+    font-size: 20px;
+}
+
+.submitbutton{
+    font-size: 25px;
+    width: 100%;
+    height: 40px;
+    margin-top: 60px;
+    border-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    border: 1px solid #00ccff;
+    background-color: #000;
+    color: #00ccff;
+}
+
+.submitbutton:hover{
+    color: #000;
+    background-color: #00ccff;
+    cursor: pointer;
+}
+
+.forgot{
+    font-size: 18px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot a{
+    cursor: pointer;
+}
